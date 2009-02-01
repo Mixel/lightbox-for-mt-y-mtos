@@ -1,0 +1,27 @@
+name: LightBox For MTOS
+id: LightBox
+key: LightBox
+author_link: http://mixelandia.com/
+author_name: Mixel Adm
+description: Adds automatic LightBox support into your blogs
+version: 1.5
+plugin_link: http://mixelandia.com/
+init_app: $LightBox::LightBox::Plugin::init_app
+l10n_class: LightBox::L10N
+
+callbacks:
+  build_page: $LightBox::LightBox::Plugin::buildc
+
+system_config_template: config.tmpl
+blog_config_template: config_blog.tmpl
+
+ 
+tags:
+  function: 
+     LightBoxScripts: $LightBox::LightBox::Plugin::lightboxscripts
+settings:
+  LBway:
+    default: "Ambos"
+    scope: system
+  
+
